@@ -1,5 +1,8 @@
 import { useSelector } from "react-redux";
-import { selectContacts, selectFilter } from "../../redux/selectors";
+import {
+  selectContacts,
+  selectFilter,
+} from "../../redux/selectors/contacts.selectors";
 import { ContactItem } from "../ContactItem/ContactItem";
 
 export const ContactList = () => {
