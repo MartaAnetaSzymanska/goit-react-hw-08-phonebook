@@ -1,4 +1,3 @@
-import "../../images/opened-notebook-near-smartphone-glasses.jpg";
 import css from "./Welcome.module.scss";
 export const Welcome = () => {
   return (
