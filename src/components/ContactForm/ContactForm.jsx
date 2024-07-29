@@ -16,7 +16,6 @@ export const ContactForm = () => {
     const form = ev.target;
     const nameValue = form.elements.name.value;
     const numberValue = form.elements.number.value;
-    dispatch(addContact({ name: nameValue, number: numberValue }));
 
     const isContactExist = contactsList.some(
       (contact) => contact.name.toLowerCase() === nameValue.toLowerCase(),
