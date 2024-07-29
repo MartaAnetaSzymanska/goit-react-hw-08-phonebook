@@ -3,14 +3,11 @@ import styles from "./ContactForm.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/operations/contacts.operations";
 import { selectContacts } from "../../redux/selectors/contacts.selectors";
-import { useState } from "react";
 
 export const ContactForm = () => {
   const nameId = nanoid();
   const numId = nanoid();
   const dispatch = useDispatch();
-  const [nameValue, setNameValue] = useState([]);
-  const [numberValue, setNumberValue] = useState([]);
 
   const contactsList = useSelector(selectContacts);
 
@@ -19,8 +16,7 @@ export const ContactForm = () => {
     const form = ev.target;
     const nameValue = form.elements.name.value;
     const numberValue = form.elements.number.value;
-    setNameValue(nameValue);
-    setNumberValue(numberValue);
+    dispatch(addContact({ name: nameValue, number: numberValue }));
 
     const isContactExist = contactsList.some(
       (contact) => contact.name.toLowerCase() === nameValue.toLowerCase(),
@@ -29,7 +25,7 @@ export const ContactForm = () => {
     if (isContactExist) {
       alert(`Contact with the name: ${nameValue} already exists.`);
     } else {
-      dispatch(addContact({ name: nameValue, phone: numberValue }));
+      dispatch(addContact({ name: nameValue, number: numberValue }));
       form.reset();
     }
   };

@@ -6,6 +6,7 @@ import { Filter } from "../components/Filter/Filter";
 import { ContactList } from "../components/ContactList/ContactList";
 import { selectIsLoading } from "../redux/selectors/contacts.selectors";
 import { selectError } from "../redux/selectors/contacts.selectors";
+import { fetchContacts } from "../redux/operations/contacts.operations";
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function Contacts() {
   return (
     <>
       <Helmet>
-        <title>Your contacts</title>
+        <title>Your Contacts</title>
       </Helmet>
       <ContactForm />
       <Filter />

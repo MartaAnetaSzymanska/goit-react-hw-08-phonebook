@@ -11,6 +11,6 @@ const setAuthHeader = (token) => {
 
 // Utility to remove JWT
 const clearAuthHeader = () => {
-  client.defaults.headers.common.Authirization = "";
+  client.defaults.headers.common.Authorization = "";
 };
 export { client, setAuthHeader, clearAuthHeader };
