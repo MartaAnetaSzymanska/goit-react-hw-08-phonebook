@@ -12,7 +12,7 @@ export const ContactItem = ({ filteredContact }) => {
 
   return (
     <li className={styles.contactListItem}>
-      {filteredContact.name}: {filteredContact.phone}
+      {filteredContact.name}: {filteredContact.number}
       <button onClick={handleDelete}>Delete</button>
     </li>
   );

@@ -1,14 +1,13 @@
-import phonebookImage from "../images/phonebook_1687024.png";
+import { Helmet } from "react-helmet";
+import { Welcome } from "../components/Welcome/Welcome";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to your PhoneBook</h1>
-      <img src={phonebookImage} alt="phonebook"></img>
-      <a href="https://www.freepik.com/icon/phonebook_1687024">
-        Icon by Freepik
-      </a>
-      <h2>Please log in or register</h2>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+      <Welcome />
     </div>
   );
 }

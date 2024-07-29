@@ -31,30 +31,32 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <label htmlFor={nameId} className={styles.label}>
-        Name
-        <input
-          id={nameId}
-          type="text"
-          name="name"
-          pattern="^[a-zA-Z]+(([' \-][a-zA-Z ])?[a-zA-Z]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required></input>
-      </label>
-      <label htmlFor={numId} className={styles.label}>
-        Number
-        <input
-          id={numId}
-          type="tel"
-          name="number"
-          pattern="\+?\d{1,4}?[\-.\s]?\(?\d{1,3}?\)?[\-.\s]?\d{1,4}[\-.\s]?\d{1,4}[\-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required></input>
-      </label>
-      <button type="submit" className={styles.formButton}>
-        Add contact
-      </button>
-    </form>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label htmlFor={nameId} className={styles.label}>
+          Name
+          <input
+            id={nameId}
+            type="text"
+            name="name"
+            pattern="^[a-zA-Z]+(([' \-][a-zA-Z ])?[a-zA-Z]*)*$"
+            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            required></input>
+        </label>
+        <label htmlFor={numId} className={styles.label}>
+          Number
+          <input
+            id={numId}
+            type="tel"
+            name="number"
+            pattern="\+?\d{1,4}?[\-.\s]?\(?\d{1,3}?\)?[\-.\s]?\d{1,4}[\-.\s]?\d{1,4}[\-.\s]?\d{1,9}"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required></input>
+        </label>
+        <button type="submit" className={styles.formButton}>
+          Add contact
+        </button>
+      </form>
+    </div>
   );
 };

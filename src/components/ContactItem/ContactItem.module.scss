@@ -1,6 +1,8 @@
 .contactListItem {
+  max-width: 400px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 5px;
   gap: 20px;
 }

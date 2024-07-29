@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { change } from "../../redux/slices/filterSlice";
 import { useState } from "react";
+import css from "./Filter.module.scss";
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -13,8 +14,8 @@ export const Filter = () => {
   };
 
   return (
-    <div>
-      <p>Find contact by name:</p>
+    <div className={css.container}>
+      <label className={css.label}>Find contact by name:</label>
       <input
         type="text"
         name="filter"
